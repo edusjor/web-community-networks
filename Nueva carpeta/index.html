@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Soluciones tecnológicas empresariales con enfoque en infraestructura, ciberseguridad y servicios gestionados." />
+  <title>{nombreempresa} | Ingeniería tecnológica empresarial</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Syne:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="metal-aura" aria-hidden="true"></div>
+  <div class="metal-grid" aria-hidden="true"></div>
+
+  <header id="inicio" class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container-lg">
+        <a class="navbar-brand brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-chip"><i class="bi bi-hexagon-fill"></i></span>
+          <span>{nombreempresa}</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#casos">Casos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="#metodo">Método</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+          <a class="btn btn-metal btn-sm" href="#contacto">Agenda una llamada</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-space">
+      <div class="container-lg">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7 hero-copy">
+            <p class="kicker">Tecnología empresarial de alto nivel</p>
+            <h1>Arquitectura digital sólida, elegante y siempre operativa.</h1>
+            <p class="hero-lead">Diseñamos, operamos y protegemos su ecosistema IT con un enfoque integral: infraestructura, soporte especializado y ciberseguridad ejecutiva.</p>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a class="btn btn-metal" href="#servicios">Explorar servicios</a>
+              <a class="btn btn-ghost" href="#nosotros">Ver nuestra propuesta</a>
+            </div>
+
+            <div class="hero-metrics mt-4">
+              <article>
+                <strong data-count="10">0</strong>
+                <span>⚙️ Años de experiencia</span>
+              </article>
+              <article>
+                <strong data-count="500">0</strong>
+                <span>🚀 Proyectos entregados</span>
+              </article>
+              <article>
+                <strong data-count="99">0</strong>
+                <span>🛡️ SLA promedio (%)</span>
+              </article>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-panel">
+              <div class="scanline"></div>
+              <div class="hero-panel-content">
+                <p class="kicker mb-2">Panel de operaciones</p>
+                <h2>Control total de su operación IT</h2>
+                <ul class="list-unstyled mb-0">
+                  <li><i class="bi bi-shield-check"></i> Seguridad en capas</li>
+                  <li><i class="bi bi-diagram-3"></i> Infraestructura escalable</li>
+                  <li><i class="bi bi-activity"></i> Monitoreo 24/7</li>
+                  <li><i class="bi bi-headset"></i> Service Desk experto</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section-space pt-0">
+      <div class="container-lg">
+        <div class="section-head mb-4">
+          <p class="kicker">Servicios</p>
+          <h2>Soluciones modulares para crecer con control</h2>
+        </div>
+
+        <div class="row g-3 services-grid">
+          <div class="col-sm-6 col-xl-3"><article class="service-card"><i class="bi bi-hdd-network"></i><h3>Administración de redes</h3><p>Rendimiento estable y continuidad operacional para su infraestructura.</p></article></div>
+          <div class="col-sm-6 col-xl-3"><article class="service-card"><i class="bi bi-bricks"></i><h3>Diseño de redes</h3><p>Arquitecturas modernas, seguras y preparadas para escalar.</p></article></div>
+          <div class="col-sm-6 col-xl-3"><article class="service-card"><i class="bi bi-broadcast-pin"></i><h3>Monitoreo 24/7</h3><p>Visibilidad en tiempo real para detectar y prevenir incidentes.</p></article></div>
+          <div class="col-sm-6 col-xl-3"><article class="service-card"><i class="bi bi-headset"></i><h3>Service Desk</h3><p>Soporte técnico especializado orientado a resultados de negocio.</p></article></div>
+          <div class="col-sm-6 col-xl-3"><article class="service-card"><i class="bi bi-tools"></i><h3>Mantenimiento preventivo</h3><p>Reducción de fallas mediante planes técnicos de intervención.</p></article></div>
+          <div class="col-sm-6 col-xl-3"><article class="service-card"><i class="bi bi-clipboard2-data"></i><h3>Consultoría IT</h3><p>Roadmaps de tecnología alineados con objetivos estratégicos.</p></article></div>
+          <div class="col-sm-6 col-xl-3"><article class="service-card"><i class="bi bi-mortarboard"></i><h3>Capacitación técnica</h3><p>Equipos mejor preparados para operar con autonomía y calidad.</p></article></div>
+          <div class="col-sm-6 col-xl-3"><article class="service-card"><i class="bi bi-ethernet"></i><h3>Cableado estructurado</h3><p>Implementación ordenada para máxima estabilidad y desempeño.</p></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="metodo" class="section-space">
+      <div class="container-lg">
+        <div class="method-panel">
+          <div>
+            <p class="kicker">Método de trabajo</p>
+            <h2>Diagnóstico, ejecución y evolución continua</h2>
+            <p>Convertimos operaciones complejas en procesos claros con indicadores, tiempos definidos y mejora iterativa.</p>
+          </div>
+          <ol class="method-steps">
+            <li><span>01</span> Diagnóstico técnico y mapa de riesgos.</li>
+            <li><span>02</span> Diseño de arquitectura y plan de implementación.</li>
+            <li><span>03</span> Operación gestionada con monitoreo continuo.</li>
+            <li><span>04</span> Revisión trimestral y optimización de costos.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="casos" class="section-space pt-0">
+      <div class="container-lg">
+        <div class="section-head mb-4">
+          <p class="kicker">Casos destacados</p>
+          <h2>Resultados medibles en operaciones críticas</h2>
+        </div>
+
+        <div class="swiper case-swiper">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide case-card">
+              <img class="case-media" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Equipo técnico monitoreando infraestructura empresarial" loading="lazy" />
+              <p class="case-tag">Retail regional</p>
+              <h3>Estabilidad operativa en 42 sedes</h3>
+              <p>Migración de red y monitoreo centralizado con disponibilidad sostenida de 99.9%.</p>
+            </article>
+            <article class="swiper-slide case-card">
+              <img class="case-media" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Centro de datos corporativo con servidores y cableado" loading="lazy" />
+              <p class="case-tag">Sector financiero</p>
+              <h3>Reducción de incidentes críticos</h3>
+              <p>Implementación de hardening, segmentación y respuesta automatizada en capas.</p>
+            </article>
+            <article class="swiper-slide case-card">
+              <img class="case-media" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Ingeniero revisando infraestructura tecnológica" loading="lazy" />
+              <p class="case-tag">Manufactura</p>
+              <h3>Service Desk con SLA mejorado</h3>
+              <p>Disminución del tiempo de resolución en 37% con soporte experto y trazabilidad.</p>
+            </article>
+            <article class="swiper-slide case-card">
+              <img class="case-media" src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=80" alt="Sala de operaciones con paneles de monitoreo empresarial" loading="lazy" />
+              <p class="case-tag">Logística</p>
+              <h3>Escalamiento sin interrupciones</h3>
+              <p>Diseño de backbone redundante para crecimiento de operación sin ventanas de caída.</p>
+            </article>
+          </div>
+          <div class="swiper-controls mt-3">
+            <div class="swiper-pagination"></div>
+            <div class="d-flex gap-2">
+              <button class="swiper-btn swiper-button-prev" aria-label="Anterior"></button>
+              <button class="swiper-btn swiper-button-next" aria-label="Siguiente"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section-space pt-0">
+      <div class="container-lg">
+        <div class="section-head mb-4">
+          <p class="kicker">Galería visual</p>
+          <h2>Así se ve una operación tecnológica moderna</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1590494165264-1ebe3602eb80?auto=format&fit=crop&w=1200&q=80" alt="Técnico instalando hardware empresarial" loading="lazy" />
+            <div class="gallery-overlay"><span>Instalación y puesta en marcha</span></div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Paneles con métricas de rendimiento tecnológico" loading="lazy" />
+            <div class="gallery-overlay"><span>Monitoreo en tiempo real</span></div>
+          </article>
+          <article class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?auto=format&fit=crop&w=1200&q=80" alt="Ingenieros trabajando en ciberseguridad" loading="lazy" />
+            <div class="gallery-overlay"><span>Ciberseguridad aplicada</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="section-space pt-0">
+      <div class="container-lg">
+        <div class="about-band">
+          <div>
+            <p class="kicker">Sobre nosotros</p>
+            <h2>Un equipo técnico con visión de negocio</h2>
+            <p>Impulsamos empresas que necesitan infraestructura robusta, soporte confiable y seguridad práctica para operar sin fricción.</p>
+          </div>
+          <div class="partners-grid">
+            <article class="partner-card">
+              <span class="partner-icon" aria-hidden="true">🏆</span>
+              <span class="partner-label">Partner Platinum</span>
+            </article>
+            <article class="partner-card">
+              <span class="partner-icon" aria-hidden="true">🔐</span>
+              <span class="partner-label">Security Certified</span>
+            </article>
+            <article class="partner-card">
+              <span class="partner-icon" aria-hidden="true">🧩</span>
+              <span class="partner-label">Technology Alliance</span>
+            </article>
+            <article class="partner-card">
+              <span class="partner-icon" aria-hidden="true">✅</span>
+              <span class="partner-label">Quality Assurance</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section-space pt-0">
+      <div class="container-lg">
+        <div class="contact-panel">
+          <div>
+            <p class="kicker">Contacto</p>
+            <h2>Hablemos de su próximo reto tecnológico</h2>
+            <p class="mb-0">+506 2222-0000<br />info@nombreempresa.com<br />San José, Costa Rica</p>
+          </div>
+
+          <form class="contact-form" action="#" method="post" onsubmit="return false">
+            <div class="row g-2">
+              <div class="col-md-6">
+                <label class="form-label">Nombre</label>
+                <input class="form-control" type="text" placeholder="Nombre" required />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Correo</label>
+                <input class="form-control" type="email" placeholder="correo@empresa.com" required />
+              </div>
+              <div class="col-12">
+                <label class="form-label">Empresa</label>
+                <input class="form-control" type="text" placeholder="Nombre de la empresa" />
+              </div>
+              <div class="col-12">
+                <button class="btn btn-metal w-100" type="submit">Solicitar propuesta</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-lg d-flex flex-column flex-md-row justify-content-between gap-2 py-4">
+      <small>© <span id="year"></span> {nombreempresa}. Todos los derechos reservados.</small>
+      <small>Política de privacidad · Términos y condiciones</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
