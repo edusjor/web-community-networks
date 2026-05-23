@@ -17,17 +17,103 @@ if (navMain && window.bootstrap) {
   });
 }
 
+const servicesTabButtons = document.querySelectorAll("#servicesTabs .nav-link");
+const servicesTabState = document.getElementById("servicesTabState");
+
+function formatServicesTabState(tabButton) {
+  const category = tabButton.getAttribute("data-category") || tabButton.textContent.trim();
+  const count = tabButton.getAttribute("data-service-count");
+  return count ? `${category} · ${count}` : category;
+}
+
+if (servicesTabButtons.length && servicesTabState) {
+  const activeTab = document.querySelector("#servicesTabs .nav-link.active");
+  if (activeTab) {
+    servicesTabState.textContent = formatServicesTabState(activeTab);
+  }
+
+  servicesTabButtons.forEach((tabButton) => {
+    tabButton.addEventListener("shown.bs.tab", () => {
+      servicesTabState.textContent = formatServicesTabState(tabButton);
+    });
+  });
+}
+
+const contactForm = document.getElementById("contactForm");
+const contactFormStatus = document.getElementById("contactFormStatus");
+
+if (contactForm && contactFormStatus) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const requestBody = new FormData(contactForm);
+
+    if (submitButton) {
+      submitButton.disabled = true;
+    }
+
+    contactFormStatus.classList.remove("is-success", "is-error");
+    contactFormStatus.textContent = "Enviando consulta...";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: requestBody,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      const responseText = await response.text();
+      let payload = {};
+
+      if (responseText) {
+        try {
+          payload = JSON.parse(responseText);
+        } catch {
+          payload = {};
+        }
+      }
+
+      if (!response.ok || payload.ok !== true) {
+        throw new Error(payload.message || "No se pudo enviar su consulta.");
+      }
+
+      contactForm.reset();
+      contactFormStatus.classList.add("is-success");
+      contactFormStatus.textContent = payload.message || "Consulta enviada correctamente.";
+    } catch (error) {
+      contactFormStatus.classList.add("is-error");
+      contactFormStatus.textContent = error instanceof Error ? error.message : "Error al enviar el formulario.";
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }
+  });
+}
+
 function setActiveLink() {
   const sections = [
     "inicio",
+    "problemas",
     "servicios",
+    "proceso",
+    "direccion-estrategica-ti",
+    "alianza-huawei",
+    "soluciones-integradas",
     "afiliaciones",
     "certificaciones",
-    "alianza-huawei",
     "contacto",
     "siguenos",
-    "servicios-huawei",
-    "propuesta",
+    "huawei-beneficios",
+    "huawei-servicios",
     "contacto-huawei"
   ];
   const scrollY = window.scrollY + 120;
@@ -65,7 +151,7 @@ if (window.gsap && window.ScrollTrigger) {
     ease: "power3.out"
   });
 
-  gsap.utils.toArray([".section-head", ".service-card", ".case-swiper", ".cert-grid", ".method-panel", ".about-band", ".contact-panel"]).forEach((el, idx) => {
+  gsap.utils.toArray([".section-head", ".problem-band", ".services-tab-content", ".process-line", ".section-cta", ".case-swiper", ".cert-grid", ".method-panel", ".about-band", ".contact-panel"]).forEach((el, idx) => {
     gsap.to(el, {
       opacity: 1,
       y: 0,
@@ -79,7 +165,7 @@ if (window.gsap && window.ScrollTrigger) {
     });
   });
 
-  const counters = document.querySelectorAll("[data-count]");
+  const counters = document.querySelectorAll(".hero-metrics [data-count]");
   counters.forEach((counter) => {
     const target = Number(counter.getAttribute("data-count") || 0);
     const data = { value: 0 };
@@ -95,10 +181,6 @@ if (window.gsap && window.ScrollTrigger) {
       },
       onUpdate: () => {
         const rounded = Math.round(data.value);
-        if (target === 99) {
-          counter.textContent = `${rounded}.9`;
-          return;
-        }
         counter.textContent = `${rounded}+`;
       }
     });
